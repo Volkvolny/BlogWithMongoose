@@ -1,0 +1,19 @@
+
+<%- include("partials/header"); -%>
+    <h1>Home</h1>
+    <p> <%= startingContent %> </p>
+
+
+  <%  chapters.forEach(function(chapter){ %>
+
+    <h1><%=chapter.chapterNum%></h1>
+    <p>
+    <%=chapter.chapterContent.substring(0, 100) + " ..."%>
+    <a href="/chapters/<%=chapter._id%>">Read More</a>
+    </p>
+
+
+    <% }) %>
+
+
+<%- include("partials/footer"); -%>
